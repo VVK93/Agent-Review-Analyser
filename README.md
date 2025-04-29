@@ -2,9 +2,9 @@
 
 ## 🚀 Overview
 
-This project simulates a user feedback board meeting using AI agents. It processes real Spotify user reviews, clusters them to identify key themes and pain points, generates diverse user personas based on these clusters, and then simulates a discussion where these personas (represented by LLM agents) provide feedback on proposed product features.
+A research-driven project that blends classic ML for large-scale review analysis with a multi-agent LLM layer (LangGraph + OpenAI) to simulate a virtual user-board session. Result: product teams get high-quality, data-grounded insights in hours—not weeks—slashing the time and cost of early-stage user research.
 
-The primary goal is to automate the process of gathering qualitative user insights and simulating user reactions to potential product changes in a structured and reproducible manner.
+Read the full article description - 
 
 ## 📂 Project Structure
 
@@ -62,7 +62,7 @@ The primary goal is to automate the process of gathering qualitative user insigh
 1.  **Clone the repository:**
     ```bash
     git clone <your-repo-url>
-    cd <your-repo-directory>/Vladimir_Kovtunovskiy/homework2-userboard-simulation
+    cd <your-repo-directory>/board-simulation
     ```
 2.  **Create a virtual environment (recommended):**
     ```bash
@@ -81,7 +81,7 @@ The primary goal is to automate the process of gathering qualitative user insigh
     nltk.download('stopwords')
     ```
 5.  **Set up OpenAI API Key:**
-    Create a `.env` file in the `Vladimir_Kovtunovskiy/homework2-userboard-simulation` directory and add your OpenAI API key:
+    Create a `.env` file in the `BoardSimulation` directory and add your OpenAI API key:
     ```
     OPENAI_API_KEY='your_openai_api_key_here'
     ```
@@ -92,7 +92,7 @@ The primary goal is to automate the process of gathering qualitative user insigh
 The main pipeline can be executed by running the `userboard_pipeline.py` script:
 
 ```bash
-python Vladimir_Kovtunovskiy/homework2-userboard-simulation/userboard_pipeline.py
+python userboard_pipeline.py
 ```
 
 This script will:
@@ -100,7 +100,7 @@ This script will:
 1.  Load cluster data from `cluster_outputs/clusters_data.json`. (Note: It assumes this file exists. You might need to run `review_prep_pipeline.py` separately first if it doesn't, although the pipeline currently doesn't automatically trigger it).
     ```bash
     # To generate cluster data (if needed):
-    python Vladimir_Kovtunovskiy/homework2-userboard-simulation/review_prep_pipeline.py
+    python review_prep_pipeline.py
     ```
 2.  Select top clusters based on negative sentiment.
 3.  Generate feature ideas based on selected clusters using an LLM.
@@ -114,10 +114,10 @@ You can also run the `review_prep_pipeline.py` script independently if you only 
 
 ```bash
 # Uses default input ./spotify_reviews.csv and output ./cluster_outputs/
-python Vladimir_Kovtunovskiy/homework2-userboard-simulation/review_prep_pipeline.py
+python review_prep_pipeline.py
 
 # Specify input/output
-python Vladimir_Kovtunovskiy/homework2-userboard-simulation/review_prep_pipeline.py --csv path/to/reviews.csv --out path/to/output_dir
+python review_prep_pipeline.py --csv path/to/reviews.csv --out path/to/output_dir
 ```
 
 ## ✨ Key Features
