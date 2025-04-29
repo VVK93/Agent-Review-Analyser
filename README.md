@@ -4,7 +4,7 @@
 
 A research-driven project that blends classic ML for large-scale review analysis with a multi-agent LLM layer (LangGraph + OpenAI) to simulate a virtual user-board session. Result: product teams get high-quality, data-grounded insights in hours—not weeks—slashing the time and cost of early-stage user research.
 
-Read the full article description - 
+Read the full article description - https://open.substack.com/pub/vvk93/p/from-reviews-to-roadmap-building?r=t37oj&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true
 
 ## 📂 Project Structure
 
