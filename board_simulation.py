@@ -10,9 +10,6 @@ import logging
 import random
 from typing import List, Sequence, Tuple
 
-from langchain.chains import ConversationChain
-from langchain.memory import ConversationBufferWindowMemory
-from langchain_core.prompts import PromptTemplate
 from langchain.schema import AIMessage, BaseMessage, HumanMessage
 from langchain_openai import ChatOpenAI
 from pathlib import Path
@@ -217,12 +214,3 @@ As {agent.name}, please respond to the facilitator's follow-up question.
     logger.info("Board simulation completed – %d messages in global history", len(global_history))
 
     return final_transcript_md, global_history 
-
-
-
-
-    
-
-
-
-

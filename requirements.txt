@@ -14,3 +14,6 @@ langgraph
 python-dotenv
 tenacity
 openai
+pytest
+pytest-asyncio
+pytest-cov
